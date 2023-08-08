@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import AbstractUser
 
 
@@ -15,6 +16,13 @@ class User(AbstractUser):
         help_text='Роль пользователя',
         choices=ROLE_CHOICES,
         default=USER,
+    )
+    phone = PhoneNumberField(
+        null=False,
+        blank=False,
+        unique=True,
+        verbose_name='Телефон',
+        help_text='Введите номер телефона'
     )
 
     class Meta:
