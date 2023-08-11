@@ -2,3 +2,4 @@ Django==3.2
 djangorestframework==3.14.0
 flake8==5.0.4
 django-phonenumber-field==7.1.0
+django-phonenumbers==1.0.1
