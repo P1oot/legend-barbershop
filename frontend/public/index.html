@@ -7,14 +7,20 @@
     <title>Барбершоп Легенда</title>
     <link rel="stylesheet" href="../src/css/bootstrap.min.css">
     <style>
-      .header-main {
-        background-color: black;
+      .wrapper {
+        background-color: rgb(121, 117, 117);
       }
+      /* .header-main {
+      } */
       .container {
+        max-width: 1080px;
+        color: white;
+        text-align: center;
+      }
+      .head-container{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: white
       }
       .nav {
         font-family: Arial, Helvetica, sans-serif;
@@ -23,13 +29,33 @@
         display: inline-block;
         list-style: none;
       }
+      .services{
+        display: flex;
+        justify-content: space-between;
+      }
+      .services b{
+        display: block;
+        flex: 1;
+        height: 3px;
+        opacity: .5;
+        background-color: white;
+        margin: auto 0;
+      }
+      .services-title{
+        margin: 0 15px;
+        text-transform: uppercase;
+      }
+      table{
+        width: 100%;
+        text-align: left;
+      }
     </style>
 </head>
-<body>
-
-  <header class="header-main">
-    <div class="container">
-      <p>number</p>
+<body class="wrapper">
+  <header class="">
+    <div class="container head-container">
+      <p>Телефон</p>
+      <p>Виджет</p>
       <div><p>logo</p></div>
       <nav class="nav">
         <ul class="nav-list">
@@ -40,14 +66,60 @@
     </div>
   </header>
 
-  <main>
-    <p>О нас / описание</p>
-    <p>Услуги</p>
+  <main class="container">
+    <p style="margin: 200px;">О нас / описание</p>
+    <h1>Услуги</h1>
+    <h2 class="services">
+      <b></b>
+      <span class="services-title">Цены барбершопа</span>
+      <b></b>
+    </h2>
+    <table width="509">
+      <tbody>
+        <tr>
+          <td width="445">
+            <h2>Услуги барбера</h2>
+          </td>
+          <td width="64">
+            <h2>Стоимость</h2>
+          </td>
+        </tr>
+        <tr>
+          <td width="445">Мужская стрижка</td>
+          <td width="64">800 р.</td>
+        </tr>
+        <tr>
+          <td width="445">Моделирование бороды и усов</td>
+          <td width="64">300 р.</td>
+        </tr>
+        <tr>
+          <td width="445">Детская стрижка</td>
+          <td width="64">500 р.</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Карта -->
+    <div style="position:relative;overflow:hidden;">
+      <a href="https://yandex.ru/maps/org/hot_mode/211442931255/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Hot Mode</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/barber_shop/239628851835/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+        Барбершоп в Санкт‑Петербурге
+      </a>
+      <iframe src="https://yandex.ru/map-widget/v1/org/hot_mode/211442931255/?ll=30.480888%2C59.922900&z=17" width="80%" height="500" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
+    <!-- Отзывы -->
+    <div style="display: flex;justify-content: center;">
+        <div style="width:560px;height:800px;overflow:hidden;position:relative;">
+        <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/211442931255?comments"></iframe>
+        <a href="https://yandex.ru/maps/org/hot_mode/211442931255/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">
+          Hot Mode на карте Санкт‑Петербурга — Яндекс Карты
+        </a>
+      </div>
+    </div>
+    
     <p>Работы</p>
-    <p>Мастера?</p>
+    <p>Мастера??</p>
   </main>
   
-  <footer>
+  <footer class="container">
     <p>Телефон, соц сети</p>
     <p>Адрес</p>
   </footer>
