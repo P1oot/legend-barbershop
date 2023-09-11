@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/css/bootstrap.min.css">
     <style>
       .wrapper {
-        background-color: rgb(121, 117, 117);
+        background-color: black;
       }
       /* .header-main {
       } */
@@ -37,8 +37,7 @@
         display: block;
         flex: 1;
         height: 3px;
-        opacity: .5;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
         margin: auto 0;
       }
       .services-title{
@@ -49,26 +48,36 @@
         width: 100%;
         text-align: left;
       }
+      table td{
+        border-bottom: 1px solid;
+        border-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+      }
+      .foot-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     </style>
 </head>
 <body class="wrapper">
   <header class="">
     <div class="container head-container">
-      <p>Телефон</p>
-      <p>Виджет</p>
-      <div><p>logo</p></div>
+      <p style="color: aquamarine;">Телефон</p>
+      <p style="color: aquamarine;">Виджет</p>
+      <div><p style="color: aquamarine;">logo</p></div>
       <nav class="nav">
         <ul class="nav-list">
-          <li>nav1</li>
-          <li>nav2</li>
+          <li style="color: aquamarine;">nav1</li>
+          <li style="color: aquamarine;">nav2</li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <p style="margin: 200px;">О нас / описание</p>
-    <h1>Услуги</h1>
+    <p style="margin: 150px; color: aquamarine;">Описание</p>
+    <p style="color: aquamarine;">Услуги / акции?</p>
     <h2 class="services">
       <b></b>
       <span class="services-title">Цены барбершопа</span>
@@ -99,7 +108,7 @@
       </tbody>
     </table>
     <!-- Карта -->
-    <div style="position:relative;overflow:hidden;">
+    <div style="position:relative;overflow:hidden;margin-top: 40px;">
       <a href="https://yandex.ru/maps/org/hot_mode/211442931255/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Hot Mode</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/barber_shop/239628851835/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
         Барбершоп в Санкт‑Петербурге
       </a>
@@ -115,13 +124,15 @@
       </div>
     </div>
     
-    <p>Работы</p>
-    <p>Мастера??</p>
+    <p style="margin-top: 150px; color: aquamarine;">Работы</p>
+    <p style="margin-bottom: 150px; color: aquamarine;">Мастера??</p>
   </main>
   
-  <footer class="container">
-    <p>Телефон, соц сети</p>
-    <p>Адрес</p>
+  <footer class="container foot-container">
+    <p style="color: aquamarine;">Телефон</p>
+    <p style="color: aquamarine;">Соц сети</p>
+    <p style="color: aquamarine;">Лого</p>
+    <p style="color: aquamarine;">Адрес</p>
   </footer>
 </body>
 </html>
