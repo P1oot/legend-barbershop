@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Services(models.Model):
     name = models.CharField(
         verbose_name='Название',
@@ -12,6 +13,7 @@ class Services(models.Model):
     )
     description = models.CharField(
         verbose_name='Описание',
+        max_length=200,
     )
 
     class Meta:
@@ -20,3 +22,9 @@ class Services(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class Haircuts(models.Model):
+    image = models.ImageField(
+        verbose_name='Стрижка'
+    )
