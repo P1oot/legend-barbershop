@@ -6,11 +6,12 @@ from .models import User
 
 class UserSerialixer(serializers.ModelSerializer):
     phone = PhoneNumberField(
-        validators = [validators.UniqueValidator(queryset=User.objects.all())]
+        validators=[validators.UniqueValidator(queryset=User.objects.all())]
     )
     email = serializers.EmailField(
-        validators = [validators.UniqueValidator(queryset=User.objects.all())]
+        validators=[validators.UniqueValidator(queryset=User.objects.all())]
     )
+
     class Meta:
         model = User
         fields = (
