@@ -26,5 +26,10 @@ class Services(models.Model):
 
 class Haircuts(models.Model):
     image = models.ImageField(
-        verbose_name='Стрижка'
+        verbose_name='Стрижка',
+        upload_to='img/',
     )
+
+    class Meta:
+        verbose_name = 'Стрижка'
+        verbose_name_plural = 'Стрижки'
