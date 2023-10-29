@@ -13,7 +13,7 @@ class Services(models.Model):
     )
     description = models.CharField(
         verbose_name='Описание',
-        max_length=200,
+        max_length=500,
     )
 
     class Meta:
@@ -33,3 +33,19 @@ class Haircuts(models.Model):
     class Meta:
         verbose_name = 'Стрижка'
         verbose_name_plural = 'Стрижки'
+
+
+class Promotions(models.Model):
+    name = models.CharField(
+        verbose_name='Название',
+        max_length=200,
+        unique=True,
+    )
+    description = models.CharField(
+        verbose_name='Описание',
+        max_length=500,
+    )
+
+    class Meta:
+        verbose_name = 'Акция'
+        verbose_name_plural = 'Акции'
