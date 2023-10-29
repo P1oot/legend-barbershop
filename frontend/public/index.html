@@ -51,6 +51,10 @@
         {% endfor %}
       </tbody>
     </table>
+    {% for promotion in promotions %}
+      <p>{{ promotion.name }}</p>
+      <p>{{ promotion.description }}</p>
+    {% endfor %}
     <!-- Карта -->
     <div style="position:relative;overflow:hidden;margin-top: 40px;">
       <a href="https://yandex.ru/maps/org/hot_mode/211442931255/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Hot Mode</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/barber_shop/239628851835/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
@@ -69,12 +73,12 @@
     </div>
     
     <p style="margin-top: 150px; color: aquamarine;">Работы</p>
-    {% for haircut in haircuts %}
+    {% comment %} {% for haircut in haircuts %}
       {% thumbnail haircut.image "100x100" crop="center" as im %}
         <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
       {% endthumbnail %} 
       {{ haircut.image }} 
-    {% endfor %}
+    {% endfor %} {% endcomment %}
     <p style="margin-bottom: 150px; color: aquamarine;">Мастера??</p>
   </main>
   
