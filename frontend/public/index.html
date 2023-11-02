@@ -27,7 +27,6 @@
 
   <main class="container">
     <p style="margin: 150px; color: aquamarine;">Описание</p>
-    <p style="color: aquamarine;">Услуги / акции?</p>
     <h2 class="services">
       <b></b>
       <span class="services-title">Цены барбершопа</span>
@@ -51,10 +50,21 @@
         {% endfor %}
       </tbody>
     </table>
-    {% for promotion in promotions %}
-      <p>{{ promotion.name }}</p>
-      <p>{{ promotion.description }}</p>
-    {% endfor %}
+    <h2 class="services" style="margin-top: 40px">
+      <b></b>
+      <span class="services-title">Акции</span>
+      <b></b>
+    </h2>
+    <table width="509">
+      <tbody>
+        {% for promotion in promotions %}
+          <tr>
+            <td width="109">{{ promotion.name }}</td>
+            <td width="400">{{ promotion.description }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
     <!-- Карта -->
     <div style="position:relative;overflow:hidden;margin-top: 40px;">
       <a href="https://yandex.ru/maps/org/hot_mode/211442931255/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Hot Mode</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/barber_shop/239628851835/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
@@ -72,13 +82,21 @@
       </div>
     </div>
     
-    <p style="margin-top: 150px; color: aquamarine;">Работы</p>
-    {% comment %} {% for haircut in haircuts %}
-      {% thumbnail haircut.image "100x100" crop="center" as im %}
-        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-      {% endthumbnail %} 
-      {{ haircut.image }} 
-    {% endfor %} {% endcomment %}
+    {% comment %} <p style="margin-top: 150px; color: aquamarine;">Работы</p> {% endcomment %}
+    <h2 class="services" style="margin-top: 40px">
+      <b></b>
+      <span class="services-title">Работы</span>
+      <b></b>
+    </h2>
+    {% for haircut in haircuts %}
+      {% thumbnail haircut.image "200x200" crop="center" upscale=True as im %}
+        {% comment %} <img class="card-img my-2" src="{{ im.url }}" width=100 height=100> {% endcomment %}
+        <img class="" src="{{ im.url }}" width=200 height=200>
+      {% endthumbnail %}
+    {% endfor %}
+    <h2 class="services" style="margin-top: 25px">
+      <b></b>
+    </h2>
     <p style="margin-bottom: 150px; color: aquamarine;">Мастера??</p>
   </main>
   
